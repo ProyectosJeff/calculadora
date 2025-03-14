@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #e0f7fa;
+}
+
+.calculadora {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 350px;
+    width: 100%;
+    border: 2px solid #007bff;
+}
+
+input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #0056b3;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+button {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    font-size: 1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+    color: #ffffff;
+}
+
+button#sumar {
+    background-color: #4caf50;
+}
+
+button#sumar:hover {
+    background-color: #45a049;
+    animation: giro 1s linear infinite;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button#restar {
+    background-color: #f44336;
+}
+
+button#restar:hover {
+    background-color: #e53935;
+    animation: sacudir 0.5s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button#multiplicar {
+    background-color: #ff9800;
+}
+
+button#multiplicar:hover {
+    background-color: #fb8c00;
+    animation: rebotar 0.5s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button#dividir {
+    background-color: #2196f3;
+}
+
+button#dividir:hover {
+    background-color: #1e88e5;
+    animation: desvanecer 0.5s;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+@keyframes giro {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes sacudir {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+@keyframes rebotar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+@keyframes desvanecer {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    margin-bottom: 20px;
+    font-weight: 600;
+    color: #333;
+}
+
+h2 {
+    margin-top: 20px;
+    font-weight: 400;
+    color: #555;
+}
